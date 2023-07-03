@@ -9,6 +9,7 @@ if ($chave) {
             continue;
         } else {
             echo ' Não achei a temperatura';
+            echo ' subindo pro github';
         }
     }
 }
