@@ -1,0 +1,34 @@
+<?php
+
+$lista=[2,4,8,12,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50];
+$valorAlvo= 26; 
+$resultado= buscaBinaria($lista, $valorAlvo);
+
+buscaBinaria($lista, $valorAlvo){
+    $direita= 0;
+    $esquerda= count($lista) -1;
+    //Definindo a sequencia da contagem
+    while ($esquerda <=$direita){
+        $meio= (int)(($esquerda + $direita) /2);
+
+        if ($lista[$meio] == $valorAlvo){
+            return $meio;
+        }
+        elseif ($lista[$meio] < $valorAlvo){
+            $esquerda = $meio +1;
+        }
+        else {
+            $direita = $meio -1;
+        }
+        return -1; //Caso o Elemento não Seja encontrado!
+
+        if ($resultado != -1){
+            echo "Elemento encontrado no índice" . $resultado;
+
+        }
+        else {
+            echo "Elemento não encontrado na Lista.";
+        }
+    }
+}
+?>
